@@ -15,6 +15,8 @@ import {
   PopoverTrigger,
 } from "@/src/components/ui/popover";
 import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 // Helper function to get category definition
 function getCategoryDefinition(category: string, t: any): string {
@@ -45,8 +47,7 @@ export function CurrentClock() {
       const now = new Date();
       const hours = now.getHours().toString().padStart(2, "0");
       const minutes = now.getMinutes().toString().padStart(2, "0");
-      const timeString = `02:20`; // User set this for testing
-      // const timeString = `${hours}:${minutes}`;
+      const timeString = `${hours}:${minutes}`;
 
       setCurrentTime(timeString);
 
@@ -122,6 +123,16 @@ export function CurrentClock() {
                     </p>
                   </PopoverContent>
                 </Popover>
+              </div>
+              <div className="flex justify-end mt-4">
+                <Link
+                  href={`/${locale}/mirror-hour/${encodeURIComponent(
+                    currentTime
+                  )}`}
+                  className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-800 transition-colors font-medium"
+                >
+                  {t("Clock.readMore")} <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           )}
