@@ -2,29 +2,40 @@
 
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { isMirrorHour, getMirrorHourMeaning } from "@/lib/mirror-hours";
+import {
+  isMirrorHour,
+  getMirrorHourMeaning,
+  getMirrorHourCategory,
+} from "@/lib/mirror-hours";
 
 export function CurrentClock() {
   const [currentTime, setCurrentTime] = useState("");
   const [isMirror, setIsMirror] = useState(false);
   const [meaning, setMeaning] = useState("");
+  const [mirrorType, setMirrorType] = useState("");
+  const [mirrorTitle, setMirrorTitle] = useState("");
 
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
       const hours = now.getHours().toString().padStart(2, "0");
       const minutes = now.getMinutes().toString().padStart(2, "0");
-      const timeString = `${hours}:${minutes}`;
+      const timeString = `00:00`;
 
       setCurrentTime(timeString);
 
-      const mirror = isMirrorHour(timeString);
-      setIsMirror(mirror);
+      const mirrorHourData = isMirrorHour(timeString);
 
-      if (mirror) {
-        setMeaning(getMirrorHourMeaning(timeString));
+      if (mirrorHourData) {
+        setIsMirror(true);
+        setMirrorTitle(mirrorHourData.title);
+        setMeaning(mirrorHourData.meaning);
+        setMirrorType(mirrorHourData.category);
       } else {
+        setIsMirror(false);
+        setMirrorTitle("");
         setMeaning("");
+        setMirrorType("");
       }
     };
 
@@ -51,11 +62,21 @@ export function CurrentClock() {
             {currentTime}
           </div>
           {isMirror && (
-            <div className="mt-4 text-center animate-fade-in">
-              <div className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mb-2">
-                Mirror Hour Detected!
+            <div className="mt-6 text-center animate-fade-in space-y-3">
+              <div className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+                ✨ Ayna Saat Yakalandı! ✨
               </div>
-              <p className="text-purple-700">{meaning}</p>
+              <h3 className="text-xl font-semibold text-purple-800 pt-2">
+                {mirrorTitle}
+              </h3>
+              <p className="text-purple-700 font-medium text-lg px-4">
+                {meaning}
+              </p>
+              <div className="pt-2">
+                <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">
+                  Türü: {mirrorType}
+                </span>
+              </div>
             </div>
           )}
         </CardContent>

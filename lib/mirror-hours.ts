@@ -302,13 +302,18 @@ const mirrorHoursData: MirrorHour[] = [
   },
 ];
 
-export function isMirrorHour(time: string): boolean {
-  return mirrorHoursData.some((hour) => hour.time === time);
+export function isMirrorHour(time: string): MirrorHour | null {
+  return mirrorHoursData.find((hour) => hour.time === time) || null;
 }
 
 export function getMirrorHourMeaning(time: string): string {
-  const hour = mirrorHoursData.find((hour) => hour.time === time);
-  return hour ? hour.meaning : "";
+  const mirrorHour = mirrorHoursData.find((hour) => hour.time === time);
+  return mirrorHour ? mirrorHour.meaning : "";
+}
+
+export function getMirrorHourCategory(time: string): string {
+  const mirrorHour = mirrorHoursData.find((hour) => hour.time === time);
+  return mirrorHour ? mirrorHour.category : "";
 }
 
 export function getAllMirrorHours(): MirrorHour[] {
