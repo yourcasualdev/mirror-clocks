@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const t = await getTranslations("MirrorHour");
   const decodedTime = decodeURIComponent(params.time);
   const mirrorHour = isMirrorHour(decodedTime);
@@ -65,7 +65,7 @@ export async function generateStaticParams() {
   return times;
 }
 
-export default async function MirrorHourPage({ params }: Props) {
+export default async function MirrorHourPage({ params }: any) {
   const t = await getTranslations("MirrorHour");
   const decodedTime = decodeURIComponent(params.time);
   const mirrorHour = isMirrorHour(decodedTime);
