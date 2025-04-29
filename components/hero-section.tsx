@@ -1,5 +1,11 @@
 import { Star } from "lucide-react";
 import { CurrentClock } from "./current-clock";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function HeroSection() {
   return (
