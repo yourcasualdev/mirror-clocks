@@ -86,7 +86,7 @@ export function CurrentClock() {
           isMirror
             ? "border-pink-400 shadow-lg shadow-pink-200"
             : "border-gray-200"
-        } transition-all duration-500`}
+        } transition-all duration-500 relative`}
       >
         <CardContent className="p-6">
           <div className="text-6xl md:text-7xl font-mono text-center py-8 tracking-widest">
@@ -137,6 +137,11 @@ export function CurrentClock() {
             </div>
           )}
         </CardContent>
+        {!isMirror && (
+          <div className="absolute mt-4 text-gray-400 text-sm italic text-right  w-full">
+            {t("Clock.notMirrorTime")}
+          </div>
+        )}
       </Card>
     </div>
   );

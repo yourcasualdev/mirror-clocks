@@ -11,6 +11,7 @@
     "currentTime": "Şu Anki Saat",
     "mirrorHourCaught": "✨ Ayna Saat Yakalandı! ✨",
     "readMore": "Detaylı Bilgi",
+    "notMirrorTime": "Ayna saat değil",
     "categories": {
       "fullMirror": "Tam Ayna saatleri, saat ve dakika rakamlarının aynı olduğu (örneğin, 11:11, 22:22) zamanlardır. Genellikle olumlu mesajlar ve eşzamanlılıklarla ilişkilendirilir.",
       "reverseMirror": "Ters Ayna saatleri, saat ve dakika rakamlarının birbirinin tersi olduğu (örneğin, 12:21, 05:50) zamanlardır. Genellikle uyarılar, farkındalık veya içsel mesajlarla ilişkilendirilir.",

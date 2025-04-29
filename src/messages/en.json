@@ -11,6 +11,7 @@
     "currentTime": "Current Time",
     "mirrorHourCaught": "✨ Mirror Hour Caught! ✨",
     "readMore": "Learn More",
+    "notMirrorTime": "Not a mirror time",
     "categories": {
       "fullMirror": "Full Mirror hours are times when the hour and minute numbers are the same (e.g., 11:11, 22:22). They are usually associated with positive messages and synchronicities.",
       "reverseMirror": "Reverse Mirror hours are times when the hour and minute numbers are reversed (e.g., 12:21, 05:50). They are usually associated with warnings, awareness, or inner messages.",
