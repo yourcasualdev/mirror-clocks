@@ -6,34 +6,39 @@ import {
   isMirrorHour,
   getMirrorHourMeaning,
   getMirrorHourCategory,
+  getMirrorHourTitle,
+  getCategoryTranslationKey,
 } from "@/src/lib/mirror-hours";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/src/components/ui/popover";
+import { useTranslations, useLocale } from "next-intl";
 
 // Helper function to get category definition
-function getCategoryDefinition(category: string): string {
+function getCategoryDefinition(category: string, t: any): string {
   switch (category) {
     case "Tam Ayna":
-      return "Tam Ayna saatleri, saat ve dakika rakamlarının aynı olduğu (örneğin, 11:11, 22:22) zamanlardır. Genellikle olumlu mesajlar ve eşzamanlılıklarla ilişkilendirilir.";
+      return t("Clock.categories.fullMirror");
     case "Ters Ayna":
-      return "Ters Ayna saatleri, saat ve dakika rakamlarının birbirinin tersi olduğu (örneğin, 12:21, 05:50) zamanlardır. Genellikle uyarılar, farkındalık veya içsel mesajlarla ilişkilendirilir.";
+      return t("Clock.categories.reverseMirror");
     case "Üçlü Ayna":
-      return "Üçlü Ayna saatleri, bir rakamın üç kez tekrar ettiği (örneğin, 01:11, 03:33) zamanlardır. Genellikle güçlü enerjiler, manevi rehberlik ve dikkat çekici mesajlarla ilişkilendirilir.";
+      return t("Clock.categories.tripleMirror");
     default:
-      return "Bu saatin özel bir anlamı olabilir.";
+      return t("Clock.categories.default");
   }
 }
 
 export function CurrentClock() {
+  const t = useTranslations();
+  const locale = useLocale();
   const [currentTime, setCurrentTime] = useState("");
   const [isMirror, setIsMirror] = useState(false);
   const [meaning, setMeaning] = useState("");
   const [mirrorType, setMirrorType] = useState("");
   const [mirrorTitle, setMirrorTitle] = useState("");
-  const [categoryDescription, setCategoryDescription] = useState(""); // State for tooltip content
+  const [categoryDescription, setCategoryDescription] = useState("");
 
   useEffect(() => {
     const updateClock = () => {
@@ -49,16 +54,18 @@ export function CurrentClock() {
 
       if (mirrorHourData) {
         setIsMirror(true);
-        setMirrorTitle(mirrorHourData.title);
-        setMeaning(mirrorHourData.meaning);
+        setMirrorTitle(getMirrorHourTitle(timeString, locale));
+        setMeaning(getMirrorHourMeaning(timeString, locale));
         setMirrorType(mirrorHourData.category);
-        setCategoryDescription(getCategoryDefinition(mirrorHourData.category)); // Set dynamic description
+        setCategoryDescription(
+          getCategoryDefinition(mirrorHourData.category, t)
+        );
       } else {
         setIsMirror(false);
         setMirrorTitle("");
         setMeaning("");
         setMirrorType("");
-        setCategoryDescription(""); // Clear description
+        setCategoryDescription("");
       }
     };
 
@@ -66,12 +73,12 @@ export function CurrentClock() {
     const interval = setInterval(updateClock, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [t, locale]);
 
   return (
     <div className="flex flex-col items-center justify-center">
       <h2 className="text-2xl font-serif text-center mb-6 text-pink-800">
-        Current Time
+        {t("Clock.currentTime")}
       </h2>
       <Card
         className={`w-full max-w-md border-2 ${
@@ -87,7 +94,7 @@ export function CurrentClock() {
           {isMirror && (
             <div className="mt-6 text-center animate-fade-in space-y-3">
               <div className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-                ✨ Ayna Saat Yakalandı! ✨
+                {t("Clock.mirrorHourCaught")}
               </div>
               <h3 className="text-xl font-semibold text-purple-800 pt-2">
                 {mirrorTitle}
@@ -99,7 +106,14 @@ export function CurrentClock() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium cursor-pointer">
-                      Türü: {mirrorType}
+                      {t("Clock.categoryTypes.type")}:{" "}
+                      {t(
+                        `Clock.categoryTypes.${getCategoryTranslationKey(
+                          mirrorType
+                        )
+                          .split(".")
+                          .pop()}`
+                      )}
                     </span>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto bg-pink-50 text-purple-800 border border-pink-200 rounded-md shadow-lg p-3">

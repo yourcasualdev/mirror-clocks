@@ -6,5 +6,21 @@
       "title": "Discover the Hidden Messages Behind Mirror Hours",
       "description": "Mirror hours are when the hour and minute numbers mirror each other. Explore their meanings and symbolism."
     }
+  },
+  "Clock": {
+    "currentTime": "Current Time",
+    "mirrorHourCaught": "✨ Mirror Hour Caught! ✨",
+    "categories": {
+      "fullMirror": "Full Mirror hours are times when the hour and minute numbers are the same (e.g., 11:11, 22:22). They are usually associated with positive messages and synchronicities.",
+      "reverseMirror": "Reverse Mirror hours are times when the hour and minute numbers are reversed (e.g., 12:21, 05:50). They are usually associated with warnings, awareness, or inner messages.",
+      "tripleMirror": "Triple Mirror hours are times when a number is repeated three times (e.g., 01:11, 03:33). They are usually associated with strong energies, spiritual guidance, and attention-grabbing messages.",
+      "default": "This hour might have a special meaning."
+    },
+    "categoryTypes": {
+      "type": "Type",
+      "fullMirror": "Full Mirror",
+      "reverseMirror": "Reverse Mirror",
+      "tripleMirror": "Triple Mirror"
+    }
   }
 }

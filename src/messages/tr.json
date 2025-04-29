@@ -6,5 +6,21 @@
       "title": "Ayna Saatlerinin Ardındaki Gizli Mesajları Keşfedin",
       "description": "Ayna saatleri, saat ve dakika numaralarının birbirini yansıttığı zamanlardır. Anlamlarını ve sembolizmini keşfedin."
     }
+  },
+  "Clock": {
+    "currentTime": "Şu Anki Saat",
+    "mirrorHourCaught": "✨ Ayna Saat Yakalandı! ✨",
+    "categories": {
+      "fullMirror": "Tam Ayna saatleri, saat ve dakika rakamlarının aynı olduğu (örneğin, 11:11, 22:22) zamanlardır. Genellikle olumlu mesajlar ve eşzamanlılıklarla ilişkilendirilir.",
+      "reverseMirror": "Ters Ayna saatleri, saat ve dakika rakamlarının birbirinin tersi olduğu (örneğin, 12:21, 05:50) zamanlardır. Genellikle uyarılar, farkındalık veya içsel mesajlarla ilişkilendirilir.",
+      "tripleMirror": "Üçlü Ayna saatleri, bir rakamın üç kez tekrar ettiği (örneğin, 01:11, 03:33) zamanlardır. Genellikle güçlü enerjiler, manevi rehberlik ve dikkat çekici mesajlarla ilişkilendirilir.",
+      "default": "Bu saatin özel bir anlamı olabilir."
+    },
+    "categoryTypes": {
+      "type": "Türü",
+      "fullMirror": "Tam Ayna",
+      "reverseMirror": "Ters Ayna",
+      "tripleMirror": "Üçlü Ayna"
+    }
   }
 }
