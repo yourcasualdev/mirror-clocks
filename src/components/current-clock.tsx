@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/src/components/ui/card";
 import {
   isMirrorHour,
   getMirrorHourMeaning,
-  getMirrorHourCategory,
   getMirrorHourTitle,
   getCategoryTranslationKey,
 } from "@/src/lib/mirror-hours";
