@@ -22,5 +22,17 @@
       "reverseMirror": "Reverse Mirror",
       "tripleMirror": "Triple Mirror"
     }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Mirror Hour Meaning"
+    },
+    "notFound": {
+      "title": "Mirror Hour Not Found",
+      "description": "The mirror hour you're looking for doesn't exist or hasn't been documented yet.",
+      "backHome": "Back to All Mirror Hours"
+    },
+    "category": "Category",
+    "backToList": "View All Mirror Hours"
   }
 }

@@ -22,5 +22,17 @@
       "reverseMirror": "Ters Ayna",
       "tripleMirror": "Üçlü Ayna"
     }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Ayna Saat Anlamı"
+    },
+    "notFound": {
+      "title": "Ayna Saat Bulunamadı",
+      "description": "Aradığınız ayna saati mevcut değil veya henüz belgelenmemiş.",
+      "backHome": "Tüm Ayna Saatlerine Dön"
+    },
+    "category": "Kategori",
+    "backToList": "Tüm Ayna Saatlerini Gör"
   }
 }
