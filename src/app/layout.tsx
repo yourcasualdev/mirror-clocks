@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({
@@ -36,6 +37,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <GoogleAnalytics gaId="G-8RJYXTJ5N7" />
+        <Analytics />
       </body>
     </html>
   );
