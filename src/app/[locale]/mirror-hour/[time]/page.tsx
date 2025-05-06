@@ -12,10 +12,10 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, time } = params;
   const t = await getTranslations("MirrorHour");
-  const decodedTime = decodeURIComponent(params.time);
-  const mirrorHour = isMirrorHour(decodedTime);
+  const mirrorHour = isMirrorHour(time);
 
   if (!mirrorHour) {
     return {
@@ -24,22 +24,22 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     };
   }
 
-  const title = mirrorHour.title[params.locale as "en" | "tr"];
-  const meaning = mirrorHour.meaning[params.locale as "en" | "tr"];
+  const titleText = mirrorHour.title[locale as "en" | "tr"];
+  const meaningText = mirrorHour.meaning[locale as "en" | "tr"];
 
   return {
-    title: `${decodedTime} - ${title} | ${t("metadata.titleSuffix")}`,
-    description: meaning,
+    title: `${time} - ${titleText} | ${t("metadata.titleSuffix")}`,
+    description: meaningText,
     openGraph: {
-      title: `${decodedTime} - ${title}`,
-      description: meaning,
+      title: `${time} - ${titleText}`,
+      description: meaningText,
       type: "article",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.locale}/mirror-hour/${params.time}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/mirror-hour/${time}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${decodedTime} - ${title}`,
-      description: meaning,
+      title: `${time} - ${titleText}`,
+      description: meaningText,
     },
   };
 }
@@ -57,7 +57,7 @@ export async function generateStaticParams() {
     for (const minute of minutes) {
       const time = `${hour}:${minute}`;
       if (isMirrorHour(time)) {
-        times.push({ time: encodeURIComponent(time) });
+        times.push({ time: time });
       }
     }
   }
@@ -67,8 +67,7 @@ export async function generateStaticParams() {
 
 export default async function MirrorHourPage({ params }: any) {
   const t = await getTranslations("MirrorHour");
-  const decodedTime = decodeURIComponent(params.time);
-  const mirrorHour = isMirrorHour(decodedTime);
+  const mirrorHour = isMirrorHour(params.time);
 
   if (!mirrorHour) {
     return (
@@ -96,7 +95,7 @@ export default async function MirrorHourPage({ params }: any) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${decodedTime} - ${title}`,
+    headline: `${params.time} - ${title}`,
     description: meaning,
     datePublished: new Date().toISOString(),
     author: {
@@ -113,7 +112,7 @@ export default async function MirrorHourPage({ params }: any) {
       />
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-8 text-pink-800">
-          {decodedTime}
+          {params.time}
         </h1>
         <Card className="border-pink-200 shadow-lg">
           <CardContent className="p-8">

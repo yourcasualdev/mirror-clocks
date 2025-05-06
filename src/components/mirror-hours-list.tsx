@@ -17,7 +17,7 @@ export function MirrorHoursList() {
       {mirrorHours.map((hour) => (
         <Link
           key={hour.time}
-          href={`/${locale}/mirror-hour/${encodeURIComponent(hour.time)}`}
+          href={`/${locale}/mirror-hour/${hour.time}`}
           className="transition-transform hover:scale-105"
         >
           <Card className="border-pink-200 hover:border-pink-400 transition-all duration-300">

@@ -125,9 +125,7 @@ export function CurrentClock() {
               </div>
               <div className="flex justify-end mt-4">
                 <Link
-                  href={`/${locale}/mirror-hour/${encodeURIComponent(
-                    currentTime
-                  )}`}
+                  href={`/${locale}/mirror-hour/${currentTime}`}
                   className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-800 transition-colors font-medium"
                 >
                   {t("Clock.readMore")} <ArrowRight className="w-4 h-4" />
