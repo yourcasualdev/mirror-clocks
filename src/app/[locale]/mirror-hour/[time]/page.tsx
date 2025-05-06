@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { isMirrorHour } from "@/src/lib/mirror-hours";
 import { Card, CardContent } from "@/src/components/ui/card";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
@@ -14,8 +13,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, time } = params;
+  const decodedTime = decodeURIComponent(time);
+
   const t = await getTranslations("MirrorHour");
-  const mirrorHour = isMirrorHour(time);
+  const mirrorHour = isMirrorHour(decodedTime);
 
   if (!mirrorHour) {
     return {
@@ -28,17 +29,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const meaningText = mirrorHour.meaning[locale as "en" | "tr"];
 
   return {
-    title: `${time} - ${titleText} | ${t("metadata.titleSuffix")}`,
+    title: `${decodedTime} - ${titleText} | ${t("metadata.titleSuffix")}`,
     description: meaningText,
     openGraph: {
-      title: `${time} - ${titleText}`,
+      title: `${decodedTime} - ${titleText}`,
       description: meaningText,
       type: "article",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/mirror-hour/${time}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/mirror-hour/${decodedTime}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${time} - ${titleText}`,
+      title: `${decodedTime} - ${titleText}`,
       description: meaningText,
     },
   };
@@ -67,7 +68,8 @@ export async function generateStaticParams() {
 
 export default async function MirrorHourPage({ params }: any) {
   const t = await getTranslations("MirrorHour");
-  const mirrorHour = isMirrorHour(params.time);
+  const decodedTime = decodeURIComponent(params.time);
+  const mirrorHour = isMirrorHour(decodedTime);
 
   if (!mirrorHour) {
     return (
@@ -95,7 +97,7 @@ export default async function MirrorHourPage({ params }: any) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${params.time} - ${title}`,
+    headline: `${decodedTime} - ${title}`,
     description: meaning,
     datePublished: new Date().toISOString(),
     author: {
@@ -112,7 +114,7 @@ export default async function MirrorHourPage({ params }: any) {
       />
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-8 text-pink-800">
-          {params.time}
+          {decodedTime}
         </h1>
         <Card className="border-pink-200 shadow-lg">
           <CardContent className="p-8">
