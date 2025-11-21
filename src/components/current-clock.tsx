@@ -19,12 +19,14 @@ import { ArrowRight } from "lucide-react";
 
 // Helper function to get category definition
 function getCategoryDefinition(category: string, t: any): string {
-  switch (category) {
-    case "Tam Ayna":
+  const translationKey = getCategoryTranslationKey(category);
+
+  switch (translationKey) {
+    case "fullMirror":
       return t("Clock.categories.fullMirror");
-    case "Ters Ayna":
+    case "reverseMirror":
       return t("Clock.categories.reverseMirror");
-    case "Üçlü Ayna":
+    case "tripleMirror":
       return t("Clock.categories.tripleMirror");
     default:
       return t("Clock.categories.default");

@@ -25,20 +25,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} ${playfair.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-        <GoogleAnalytics gaId="G-8RJYXTJ5N7" />
-        <Analytics />
-      </body>
-    </html>
-  );
+  return children;
 }

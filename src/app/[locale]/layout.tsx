@@ -3,6 +3,17 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import { Heart } from "lucide-react";
 import { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import { ThemeProvider } from "@/src/components/theme-provider";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+
+const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-playfair",
+});
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "tr" }];
@@ -46,26 +57,35 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="min-h-screen flex flex-col">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <main className="flex-1">{children}</main>
-          <footer className="py-8 px-4 text-sm text-gray-500">
-            <div className="container mx-auto flex justify-end">
-              <div className="flex items-center gap-2">
-                Made with{" "}
-                <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> by{" "}
-                <a
-                  href="https://yourcasual.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
-                >
-                  yourcasualdev
-                </a>
+      <body className={`${inter.className} ${playfair.variable} min-h-screen flex flex-col`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <main className="flex-1">{children}</main>
+            <footer className="py-8 px-4 text-sm text-gray-500">
+              <div className="container mx-auto flex justify-end">
+                <div className="flex items-center gap-2">
+                  Made with{" "}
+                  <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> by{" "}
+                  <a
+                    href="https://yourcasual.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
+                  >
+                    yourcasualdev
+                  </a>
+                </div>
               </div>
-            </div>
-          </footer>
-        </NextIntlClientProvider>
+            </footer>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+        <GoogleAnalytics gaId="G-8RJYXTJ5N7" />
+        <Analytics />
       </body>
     </html>
   );

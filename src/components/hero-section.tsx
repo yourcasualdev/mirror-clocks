@@ -1,3 +1,5 @@
+"use client";
+
 import { Star } from "lucide-react";
 import { CurrentClock } from "./current-clock";
 import { useTranslations, useLocale } from "next-intl";
