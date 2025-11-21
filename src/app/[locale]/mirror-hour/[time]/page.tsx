@@ -5,14 +5,14 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
 type Props = {
-  params: {
+  params: Promise<{
     time: string;
     locale: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, time } = params;
+  const { locale, time } = await params;
   const decodedTime = decodeURIComponent(time);
 
   const t = await getTranslations("MirrorHour");
@@ -27,15 +27,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const titleText = mirrorHour.title[locale as "en" | "tr"];
   const meaningText = mirrorHour.meaning[locale as "en" | "tr"];
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
 
   return {
     title: `${decodedTime} - ${titleText} | ${t("metadata.titleSuffix")}`,
     description: meaningText,
+    alternates: {
+      canonical: `${baseUrl}/${locale}/mirror-hour/${decodedTime}`,
+      languages: {
+        en: `${baseUrl}/en/mirror-hour/${decodedTime}`,
+        tr: `${baseUrl}/tr/mirror-hour/${decodedTime}`,
+        "x-default": `${baseUrl}/en/mirror-hour/${decodedTime}`,
+      },
+    },
     openGraph: {
       title: `${decodedTime} - ${titleText}`,
       description: meaningText,
       type: "article",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/mirror-hour/${decodedTime}`,
+      url: `${baseUrl}/${locale}/mirror-hour/${decodedTime}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -58,7 +68,7 @@ export async function generateStaticParams() {
     for (const minute of minutes) {
       const time = `${hour}:${minute}`;
       if (isMirrorHour(time)) {
-        times.push({ time: time });
+        times.push({ time });
       }
     }
   }
@@ -66,9 +76,10 @@ export async function generateStaticParams() {
   return times;
 }
 
-export default async function MirrorHourPage({ params }: any) {
+export default async function MirrorHourPage({ params }: Props) {
+  const { time, locale } = await params;
   const t = await getTranslations("MirrorHour");
-  const decodedTime = decodeURIComponent(params.time);
+  const decodedTime = decodeURIComponent(time);
   const mirrorHour = isMirrorHour(decodedTime);
 
   if (!mirrorHour) {
@@ -90,8 +101,8 @@ export default async function MirrorHourPage({ params }: any) {
     );
   }
 
-  const title = mirrorHour.title[params.locale as "en" | "tr"];
-  const meaning = mirrorHour.meaning[params.locale as "en" | "tr"];
+  const title = mirrorHour.title[locale as "en" | "tr"];
+  const meaning = mirrorHour.meaning[locale as "en" | "tr"];
 
   // Add structured data for SEO
   const structuredData = {

@@ -2,15 +2,41 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { Heart } from "lucide-react";
+import { Metadata } from "next";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "tr" }];
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
+
+  return {
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        tr: `${baseUrl}/tr`,
+        "x-default": `${baseUrl}/en`,
+      },
+    },
+  };
+}
+
 export default async function LocaleLayout({
   children,
-  params: { locale },
-}: any) {
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;

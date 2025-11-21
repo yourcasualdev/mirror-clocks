@@ -1,6 +1,36 @@
 import { MirrorHoursList } from "@/src/components/mirror-hours-list";
 import { HeroSection } from "@/src/components/hero-section";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
+  const t = await getTranslations("HomePage");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        tr: `${baseUrl}/tr`,
+        "x-default": `${baseUrl}/en`,
+      },
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "tr" }];
+}
 
 export default function Home() {
   const t = useTranslations("HomePage");

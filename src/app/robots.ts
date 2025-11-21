@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://mirror-clocks.vercel.app";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
 
   return {
     rules: {
