@@ -91,7 +91,7 @@ export default async function MirrorHourPage({ params }: Props) {
         <p className="text-center text-gray-600">{t("notFound.description")}</p>
         <div className="text-center mt-8">
           <Link
-            href="/"
+            href={`/${locale}`}
             className="text-pink-600 hover:text-pink-800 underline transition-colors"
           >
             {t("notFound.backHome")}
@@ -145,7 +145,7 @@ export default async function MirrorHourPage({ params }: Props) {
         </Card>
         <div className="mt-8 text-center">
           <Link
-            href="/"
+            href={`/${locale}`}
             className="text-pink-600 hover:text-pink-800 underline transition-colors"
           >
             {t("backToList")}
