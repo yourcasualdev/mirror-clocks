@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "镜像时间及其含义",
+    "description": "探索镜像时间背后的神秘含义及其精神意义。了解当您看到11:11、22:22和其他镜像时间时意味着什么。",
+    "subtitle": "所有镜像时间及其含义",
+    "hero": {
+      "title": "发现镜像时间背后的隐藏信息",
+      "description": "镜像时间是指小时和分钟数字相互镜像的时刻。探索它们的含义和象征意义。"
+    }
+  },
+  "Clock": {
+    "currentTime": "当前时间",
+    "mirrorHourCaught": "✨ 捕获镜像时间！✨",
+    "readMore": "了解更多",
+    "notMirrorTime": "不是镜像时间",
+    "categories": {
+      "fullMirror": "完全镜像时间是指小时和分钟数字相同的时刻（例如11:11、22:22）。它们通常与积极的信息和同步性相关联。",
+      "reverseMirror": "反向镜像时间是指小时和分钟数字相反的时刻（例如12:21、05:50）。它们通常与警告、意识或内在信息相关联。",
+      "tripleMirror": "三重镜像时间是指一个数字重复三次的时刻（例如01:11、03:33）。它们通常与强大的能量、精神指导和引人注意的信息相关联。",
+      "default": "这个时刻可能有特殊的含义。"
+    },
+    "categoryTypes": {
+      "type": "类型",
+      "fullMirror": "完全镜像",
+      "reverseMirror": "反向镜像",
+      "tripleMirror": "三重镜像"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "镜像时间含义"
+    },
+    "notFound": {
+      "title": "未找到镜像时间",
+      "description": "您寻找的镜像时间不存在或尚未记录。",
+      "backHome": "返回所有镜像时间"
+    },
+    "category": "类别",
+    "backToList": "查看所有镜像时间",
+    "sections": {
+      "numerology": "🔢 数字学与神圣数字",
+      "astrology": "⭐ 占星学与天体影响",
+      "loveAndRelationships": "💕 爱情与关系",
+      "careerAndMoney": "💼 职业与财务成功",
+      "spiritualGuidance": "🧘 精神指导与实践",
+      "actionSteps": "✨ 今日行动步骤"
+    }
+  }
+}

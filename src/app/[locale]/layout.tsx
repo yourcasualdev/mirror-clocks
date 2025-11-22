@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "tr" }];
+  return [{ locale: "en" }, { locale: "tr" }, { locale: "zh" }];
 }
 
 export async function generateMetadata({
@@ -34,6 +34,7 @@ export async function generateMetadata({
       languages: {
         en: `${baseUrl}/en`,
         tr: `${baseUrl}/tr`,
+        zh: `${baseUrl}/zh`,
         "x-default": `${baseUrl}/en`,
       },
     },
@@ -57,7 +58,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} ${playfair.variable} min-h-screen flex flex-col`}>
+      <body
+        className={`${inter.className} ${playfair.variable} min-h-screen flex flex-col`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

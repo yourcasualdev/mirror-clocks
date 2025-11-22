@@ -12,6 +12,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const messages = {
     en: () => import("../messages/en.json"),
     tr: () => import("../messages/tr.json"),
+    zh: () => import("../messages/zh.json"),
   };
 
   return {
