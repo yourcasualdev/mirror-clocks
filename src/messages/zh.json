@@ -52,7 +52,6 @@
     }
   },
   "Footer": {
-    "madeWith": "用爱制作",
-    "by": "由"
+    "madeWithBy": "由 <author>yourcasualdev</author> 用 <heart></heart> 制作"
   }
 }

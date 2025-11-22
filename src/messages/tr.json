@@ -52,7 +52,6 @@
     }
   },
   "Footer": {
-    "madeWith": "İle yapıldı",
-    "by": "tarafından"
+    "madeWithBy": "<author>yourcasualdev</author> tarafından <heart></heart> ile yapıldı"
   }
 }

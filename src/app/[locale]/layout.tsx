@@ -93,17 +93,21 @@ export default async function LocaleLayout({
             <footer className="py-8 px-4 text-sm text-gray-500">
               <div className="container mx-auto flex justify-end">
                 <div className="flex items-center gap-2">
-                  {t("madeWith")}{" "}
-                  <Heart className="w-4 h-4 text-pink-500 fill-pink-500" />{" "}
-                  {t("by")}{" "}
-                  <a
-                    href="https://yourcasual.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
-                  >
-                    yourcasualdev
-                  </a>
+                  {t.rich("madeWithBy", {
+                    heart: () => (
+                      <Heart className="w-4 h-4 text-pink-500 fill-pink-500 inline-block" />
+                    ),
+                    author: (children) => (
+                      <a
+                        href="https://yourcasual.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
+                      >
+                        {children}
+                      </a>
+                    ),
+                  })}
                 </div>
               </div>
             </footer>

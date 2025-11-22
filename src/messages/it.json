@@ -52,7 +52,6 @@
     }
   },
   "Footer": {
-    "madeWith": "Realizzato con",
-    "by": "da"
+    "madeWithBy": "Realizzato con <heart></heart> da <author>yourcasualdev</author>"
   }
 }
