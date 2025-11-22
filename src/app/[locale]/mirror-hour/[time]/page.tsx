@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, time } = await params;
   const decodedTime = decodeURIComponent(time);
 
-  const t = await getTranslations("MirrorHour");
+  const t = await getTranslations({ locale, namespace: "MirrorHour" });
   const mirrorHour = isMirrorHour(decodedTime);
 
   if (!mirrorHour) {
@@ -90,7 +90,7 @@ export async function generateStaticParams() {
 
 export default async function MirrorHourPage({ params }: Props) {
   const { time, locale } = await params;
-  const t = await getTranslations("MirrorHour");
+  const t = await getTranslations({ locale, namespace: "MirrorHour" });
   const decodedTime = decodeURIComponent(time);
   const mirrorHour = isMirrorHour(decodedTime);
 
@@ -158,7 +158,7 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("category")}
               </h3>
               <div className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
-                {t(`categoryValues.${mirrorHour.category}` as any) ||
+                {t.raw("categoryValues")[mirrorHour.category] ||
                   mirrorHour.category}
               </div>
             </div>

@@ -37,6 +37,11 @@
     },
     "category": "Kategori",
     "backToList": "Tüm Ayna Saatlerini Gör",
+    "categoryValues": {
+      "Tam Ayna": "Tam Ayna",
+      "Ters Ayna": "Ters Ayna",
+      "Üçlü Ayna": "Üçlü Ayna"
+    },
     "sections": {
       "numerology": "🔢 Numeroloji & Kutsal Sayılar",
       "astrology": "⭐ Astroloji & Gök Cisimleri",
@@ -45,5 +50,9 @@
       "spiritualGuidance": "🧘 Ruhsal Rehberlik & Pratikler",
       "actionSteps": "✨ Bugün İçin Aksiyon Adımları"
     }
+  },
+  "Footer": {
+    "madeWith": "İle yapıldı",
+    "by": "tarafından"
   }
 }

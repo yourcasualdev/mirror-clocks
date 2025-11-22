@@ -71,7 +71,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const t = await getTranslations("Footer");
+  const t = await getTranslations({ locale, namespace: "Footer" });
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -90,7 +90,8 @@ export default async function LocaleLayout({
               <div className="container mx-auto flex justify-end">
                 <div className="flex items-center gap-2">
                   {t("madeWith")}{" "}
-                  <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> by{" "}
+                  <Heart className="w-4 h-4 text-pink-500 fill-pink-500" />{" "}
+                  {t("by")}{" "}
                   <a
                     href="https://yourcasual.dev"
                     target="_blank"
