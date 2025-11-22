@@ -85,7 +85,7 @@ export function CurrentClock() {
       <Card
         className={`w-full max-w-md border-2 ${
           isMirror
-            ? "border-pink-400 shadow-lg shadow-pink-200"
+            ? "border-pink-400 shadow-lg shadow-pink-200 animate-pulse-ring"
             : "border-gray-200"
         } transition-all duration-500 relative`}
       >
@@ -94,9 +94,9 @@ export function CurrentClock() {
             {currentTime}
           </div>
           {isMirror && (
-            <div className="mt-6 text-center animate-fade-in space-y-3">
-              <div className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-                {t("Clock.mirrorHourCaught")}
+            <div className="mt-6 text-center animate-fade-in space-y-4">
+              <div className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-md animate-bounce">
+                ✨ {t("Clock.mirrorHourCaught")} ✨
               </div>
               <h3 className="text-xl font-semibold text-purple-800 pt-2">
                 {mirrorTitle}
@@ -125,12 +125,12 @@ export function CurrentClock() {
                   </PopoverContent>
                 </Popover>
               </div>
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-center mt-6">
                 <Link
                   href={`/${locale}/mirror-hour/${currentTime}`}
-                  className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-800 transition-colors font-medium"
+                  className="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full transition-all transform hover:scale-105 font-bold shadow-lg"
                 >
-                  {t("Clock.readMore")} <ArrowRight className="w-4 h-4" />
+                  {t("Clock.readMore")} <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </div>
