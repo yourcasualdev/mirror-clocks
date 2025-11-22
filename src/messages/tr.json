@@ -36,6 +36,14 @@
       "backHome": "Tüm Ayna Saatlerine Dön"
     },
     "category": "Kategori",
-    "backToList": "Tüm Ayna Saatlerini Gör"
+    "backToList": "Tüm Ayna Saatlerini Gör",
+    "sections": {
+      "numerology": "🔢 Numeroloji & Kutsal Sayılar",
+      "astrology": "⭐ Astroloji & Gök Cisimleri",
+      "loveAndRelationships": "💕 Aşk & İlişkiler",
+      "careerAndMoney": "💼 Kariyer & Finansal Başarı",
+      "spiritualGuidance": "🧘 Ruhsal Rehberlik & Pratikler",
+      "actionSteps": "✨ Bugün İçin Aksiyon Adımları"
+    }
   }
 }

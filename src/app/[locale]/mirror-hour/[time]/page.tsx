@@ -123,11 +123,13 @@ export default async function MirrorHourPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-serif text-center mb-8 text-pink-800">
           {decodedTime}
         </h1>
-        <Card className="border-pink-200 shadow-lg">
+
+        {/* Main Card */}
+        <Card className="border-pink-200 shadow-lg mb-6">
           <CardContent className="p-8">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">
               {title}
@@ -143,6 +145,86 @@ export default async function MirrorHourPage({ params }: Props) {
             </div>
           </CardContent>
         </Card>
+
+        {/* Rich Content Sections */}
+        {mirrorHour.numerology && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-purple-50 to-pink-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-purple-900 mb-4">
+                {t("sections.numerology")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.numerology[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {mirrorHour.astrology && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-blue-50 to-purple-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-purple-900 mb-4">
+                {t("sections.astrology")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.astrology[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {mirrorHour.loveAndRelationships && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-pink-50 to-rose-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-pink-900 mb-4">
+                {t("sections.loveAndRelationships")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.loveAndRelationships[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {mirrorHour.careerAndMoney && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-green-50 to-emerald-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-green-900 mb-4">
+                {t("sections.careerAndMoney")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.careerAndMoney[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {mirrorHour.spiritualGuidance && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-indigo-900 mb-4">
+                {t("sections.spiritualGuidance")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.spiritualGuidance[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {mirrorHour.actionSteps && (
+          <Card className="border-pink-200 shadow-md mb-6 bg-gradient-to-br from-amber-50 to-yellow-50">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-amber-900 mb-4">
+                {t("sections.actionSteps")}
+              </h3>
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                {mirrorHour.actionSteps[locale as "en" | "tr"]}
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
         <div className="mt-8 text-center">
           <Link
             href={`/${locale}`}

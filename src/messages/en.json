@@ -36,6 +36,14 @@
       "backHome": "Back to All Mirror Hours"
     },
     "category": "Category",
-    "backToList": "View All Mirror Hours"
+    "backToList": "View All Mirror Hours",
+    "sections": {
+      "numerology": "🔢 Numerology & Sacred Numbers",
+      "astrology": "⭐ Astrology & Celestial Influences",
+      "loveAndRelationships": "💕 Love & Relationships",
+      "careerAndMoney": "💼 Career & Financial Success",
+      "spiritualGuidance": "🧘 Spiritual Guidance & Practices",
+      "actionSteps": "✨ Action Steps for Today"
+    }
   }
 }
