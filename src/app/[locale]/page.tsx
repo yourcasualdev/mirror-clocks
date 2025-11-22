@@ -1,5 +1,6 @@
 import { MirrorHoursList } from "@/src/components/mirror-hours-list";
 import { HeroSection } from "@/src/components/hero-section";
+import { ScrollIndicator } from "@/src/components/scroll-indicator";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 
@@ -42,6 +43,7 @@ export default async function Home({
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50">
       <HeroSection />
+      <ScrollIndicator />
       <div className="container mx-auto px-4 py-12">
         <div className="">
           <h2 className="text-3xl font-serif text-center mb-8 text-pink-800">

@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/src/components/language-switcher";
+import { Header } from "@/src/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({
@@ -86,9 +87,8 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <div className="absolute top-4 right-4 z-50">
-              <LanguageSwitcher />
-            </div>
+            <Header />
+
             <main className="flex-1">{children}</main>
             <footer className="py-8 px-4 text-sm text-gray-500">
               <div className="container mx-auto flex justify-end">
