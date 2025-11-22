@@ -42,7 +42,6 @@ export default async function Home({
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50">
-      {/* @ts-expect-error Async Server Component */}
       <HeroSection locale={locale} />
       <ScrollIndicator />
       <div className="container mx-auto px-4 py-12">
@@ -50,7 +49,6 @@ export default async function Home({
           <h2 className="text-3xl font-serif text-center mb-8 text-pink-800">
             {t("subtitle")}
           </h2>
-          {/* @ts-expect-error Async Server Component */}
           <MirrorHoursList locale={locale} />
         </div>
       </div>
