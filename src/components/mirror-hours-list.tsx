@@ -1,18 +1,16 @@
-"use client";
-
 import { Card, CardContent } from "@/src/components/ui/card";
 import {
   getAllMirrorHours,
   getCategoryTranslationKey,
   type LocalizedText,
 } from "@/src/lib/mirror-hours";
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import Link from "next/link";
+import React from "react";
 
-export function MirrorHoursList() {
+export async function MirrorHoursList({ locale }: { locale: string }) {
   const mirrorHours = getAllMirrorHours();
-  const t = useTranslations();
-  const locale = useLocale();
+  const t = await getTranslations({ locale });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

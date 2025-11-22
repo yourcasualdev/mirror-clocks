@@ -11,11 +11,12 @@ import { getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/src/components/language-switcher";
 import { Header } from "@/src/components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-playfair",
+  display: "swap",
 });
 
 export function generateStaticParams() {
