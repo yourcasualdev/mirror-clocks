@@ -13,6 +13,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
     en: () => import("../messages/en.json"),
     tr: () => import("../messages/tr.json"),
     zh: () => import("../messages/zh.json"),
+    de: () => import("../messages/de.json"),
+    nl: () => import("../messages/nl.json"),
+    es: () => import("../messages/es.json"),
+    fr: () => import("../messages/fr.json"),
+    it: () => import("../messages/it.json"),
   };
 
   return {

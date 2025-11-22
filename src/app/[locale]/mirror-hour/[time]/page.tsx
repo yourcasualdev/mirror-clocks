@@ -26,9 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const titleText =
-    mirrorHour.title[locale as "en" | "tr" | "zh"] || mirrorHour.title.en;
+    mirrorHour.title[
+      locale as "en" | "tr" | "zh" | "de" | "nl" | "es" | "fr" | "it"
+    ] || mirrorHour.title.en;
   const meaningText =
-    mirrorHour.meaning[locale as "en" | "tr" | "zh"] || mirrorHour.meaning.en;
+    mirrorHour.meaning[
+      locale as "en" | "tr" | "zh" | "de" | "nl" | "es" | "fr" | "it"
+    ] || mirrorHour.meaning.en;
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
 
@@ -41,6 +45,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         en: `${baseUrl}/en/mirror-hour/${decodedTime}`,
         tr: `${baseUrl}/tr/mirror-hour/${decodedTime}`,
         zh: `${baseUrl}/zh/mirror-hour/${decodedTime}`,
+        de: `${baseUrl}/de/mirror-hour/${decodedTime}`,
+        nl: `${baseUrl}/nl/mirror-hour/${decodedTime}`,
+        es: `${baseUrl}/es/mirror-hour/${decodedTime}`,
+        fr: `${baseUrl}/fr/mirror-hour/${decodedTime}`,
+        it: `${baseUrl}/it/mirror-hour/${decodedTime}`,
         "x-default": `${baseUrl}/en/mirror-hour/${decodedTime}`,
       },
     },
@@ -105,9 +114,13 @@ export default async function MirrorHourPage({ params }: Props) {
   }
 
   const title =
-    mirrorHour.title[locale as "en" | "tr" | "zh"] || mirrorHour.title.en;
+    mirrorHour.title[
+      locale as "en" | "tr" | "zh" | "de" | "nl" | "es" | "fr" | "it"
+    ] || mirrorHour.title.en;
   const meaning =
-    mirrorHour.meaning[locale as "en" | "tr" | "zh"] || mirrorHour.meaning.en;
+    mirrorHour.meaning[
+      locale as "en" | "tr" | "zh" | "de" | "nl" | "es" | "fr" | "it"
+    ] || mirrorHour.meaning.en;
 
   // Add structured data for SEO
   const structuredData = {
@@ -159,8 +172,17 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("sections.numerology")}
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {mirrorHour.numerology?.[locale as "en" | "tr" | "zh"] ||
-                  mirrorHour.numerology?.en}
+                {mirrorHour.numerology?.[
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
+                ] || mirrorHour.numerology?.en}
               </p>
             </CardContent>
           </Card>
@@ -173,8 +195,17 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("sections.astrology")}
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {mirrorHour.astrology?.[locale as "en" | "tr" | "zh"] ||
-                  mirrorHour.astrology?.en}
+                {mirrorHour.astrology?.[
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
+                ] || mirrorHour.astrology?.en}
               </p>
             </CardContent>
           </Card>
@@ -188,7 +219,15 @@ export default async function MirrorHourPage({ params }: Props) {
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                 {mirrorHour.loveAndRelationships?.[
-                  locale as "en" | "tr" | "zh"
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
                 ] || mirrorHour.loveAndRelationships?.en}
               </p>
             </CardContent>
@@ -202,8 +241,17 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("sections.careerAndMoney")}
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {mirrorHour.careerAndMoney?.[locale as "en" | "tr" | "zh"] ||
-                  mirrorHour.careerAndMoney?.en}
+                {mirrorHour.careerAndMoney?.[
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
+                ] || mirrorHour.careerAndMoney?.en}
               </p>
             </CardContent>
           </Card>
@@ -216,8 +264,17 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("sections.spiritualGuidance")}
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {mirrorHour.spiritualGuidance?.[locale as "en" | "tr" | "zh"] ||
-                  mirrorHour.spiritualGuidance?.en}
+                {mirrorHour.spiritualGuidance?.[
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
+                ] || mirrorHour.spiritualGuidance?.en}
               </p>
             </CardContent>
           </Card>
@@ -230,8 +287,17 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("sections.actionSteps")}
               </h3>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {mirrorHour.actionSteps?.[locale as "en" | "tr" | "zh"] ||
-                  mirrorHour.actionSteps?.en}
+                {mirrorHour.actionSteps?.[
+                  locale as
+                    | "en"
+                    | "tr"
+                    | "zh"
+                    | "de"
+                    | "nl"
+                    | "es"
+                    | "fr"
+                    | "it"
+                ] || mirrorHour.actionSteps?.en}
               </p>
             </CardContent>
           </Card>

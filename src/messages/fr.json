@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Heures miroir et leurs significations",
+    "description": "Découvrez les significations mystiques derrière les heures miroir et leur importance spirituelle. Apprenez ce que cela signifie lorsque vous voyez 11:11, 22:22 et d'autres heures miroir.",
+    "subtitle": "Toutes les heures miroir et leurs significations",
+    "hero": {
+      "title": "Découvrez les messages cachés derrière les heures miroir",
+      "description": "Les heures miroir sont des moments où les chiffres de l'heure et des minutes se reflètent. Explorez leurs significations et leur symbolisme."
+    }
+  },
+  "Clock": {
+    "currentTime": "Heure actuelle",
+    "mirrorHourCaught": "✨ Heure miroir capturée ! ✨",
+    "readMore": "En savoir plus",
+    "notMirrorTime": "Pas une heure miroir",
+    "categories": {
+      "fullMirror": "Les heures miroir complètes sont des moments où les chiffres de l'heure et des minutes sont identiques (par exemple, 11:11, 22:22). Elles sont généralement associées à des messages positifs et à des synchronicités.",
+      "reverseMirror": "Les heures miroir inversées sont des moments où les chiffres de l'heure et des minutes sont inversés (par exemple, 12:21, 05:50). Elles sont généralement associées à des avertissements, à la conscience ou à des messages intérieurs.",
+      "tripleMirror": "Les heures miroir triples sont des moments où un chiffre est répété trois fois (par exemple, 01:11, 03:33). Elles sont généralement associées à des énergies fortes, à des conseils spirituels et à des messages qui attirent l'attention.",
+      "default": "Cette heure pourrait avoir une signification particulière."
+    },
+    "categoryTypes": {
+      "type": "Type",
+      "fullMirror": "Miroir complet",
+      "reverseMirror": "Miroir inversé",
+      "tripleMirror": "Miroir triple"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Signification de l'heure miroir"
+    },
+    "notFound": {
+      "title": "Heure miroir introuvable",
+      "description": "L'heure miroir que vous recherchez n'existe pas ou n'a pas encore été documentée.",
+      "backHome": "Retour à toutes les heures miroir"
+    },
+    "category": "Catégorie",
+    "backToList": "Voir toutes les heures miroir",
+    "sections": {
+      "numerology": "🔢 Numérologie et nombres sacrés",
+      "astrology": "⭐ Astrologie et influences célestes",
+      "loveAndRelationships": "💕 Amour et relations",
+      "careerAndMoney": "💼 Carrière et réussite financière",
+      "spiritualGuidance": "🧘 Guidance spirituelle et pratiques",
+      "actionSteps": "✨ Étapes d'action pour aujourd'hui"
+    }
+  }
+}

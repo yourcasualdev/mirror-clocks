@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Spiegelstunden & ihre Bedeutungen",
+    "description": "Entdecken Sie die mystischen Bedeutungen hinter Spiegelstunden und ihre spirituelle Bedeutung. Erfahren Sie, was es bedeutet, wenn Sie 11:11, 22:22 und andere Spiegelstunden sehen.",
+    "subtitle": "Alle Spiegelstunden & ihre Bedeutungen",
+    "hero": {
+      "title": "Entdecken Sie die verborgenen Botschaften hinter Spiegelstunden",
+      "description": "Spiegelstunden sind Zeitpunkte, an denen sich die Stunden- und Minutenzahlen spiegeln. Erkunden Sie ihre Bedeutungen und Symbolik."
+    }
+  },
+  "Clock": {
+    "currentTime": "Aktuelle Zeit",
+    "mirrorHourCaught": "✨ Spiegelstunde erwischt! ✨",
+    "readMore": "Mehr erfahren",
+    "notMirrorTime": "Keine Spiegelzeit",
+    "categories": {
+      "fullMirror": "Vollständige Spiegelstunden sind Zeiten, in denen die Stunden- und Minutenzahlen gleich sind (z.B. 11:11, 22:22). Sie werden normalerweise mit positiven Botschaften und Synchronizitäten in Verbindung gebracht.",
+      "reverseMirror": "Umgekehrte Spiegelstunden sind Zeiten, in denen die Stunden- und Minutenzahlen umgekehrt sind (z.B. 12:21, 05:50). Sie werden normalerweise mit Warnungen, Bewusstsein oder inneren Botschaften in Verbindung gebracht.",
+      "tripleMirror": "Dreifache Spiegelstunden sind Zeiten, in denen eine Zahl dreimal wiederholt wird (z.B. 01:11, 03:33). Sie werden normalerweise mit starken Energien, spiritueller Führung und aufmerksamkeitserregenden Botschaften in Verbindung gebracht.",
+      "default": "Diese Stunde könnte eine besondere Bedeutung haben."
+    },
+    "categoryTypes": {
+      "type": "Typ",
+      "fullMirror": "Vollständiger Spiegel",
+      "reverseMirror": "Umgekehrter Spiegel",
+      "tripleMirror": "Dreifacher Spiegel"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Spiegelstunden Bedeutung"
+    },
+    "notFound": {
+      "title": "Spiegelstunde nicht gefunden",
+      "description": "Die gesuchte Spiegelstunde existiert nicht oder wurde noch nicht dokumentiert.",
+      "backHome": "Zurück zu allen Spiegelstunden"
+    },
+    "category": "Kategorie",
+    "backToList": "Alle Spiegelstunden anzeigen",
+    "sections": {
+      "numerology": "🔢 Numerologie & Heilige Zahlen",
+      "astrology": "⭐ Astrologie & Himmlische Einflüsse",
+      "loveAndRelationships": "💕 Liebe & Beziehungen",
+      "careerAndMoney": "💼 Karriere & Finanzieller Erfolg",
+      "spiritualGuidance": "🧘 Spirituelle Führung & Praktiken",
+      "actionSteps": "✨ Handlungsschritte für heute"
+    }
+  }
+}

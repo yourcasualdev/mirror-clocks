@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Ore specchio e i loro significati",
+    "description": "Scopri i significati mistici dietro le ore specchio e la loro importanza spirituale. Scopri cosa significa quando vedi 11:11, 22:22 e altre ore specchio.",
+    "subtitle": "Tutte le ore specchio e i loro significati",
+    "hero": {
+      "title": "Scopri i messaggi nascosti dietro le ore specchio",
+      "description": "Le ore specchio sono momenti in cui i numeri dell'ora e dei minuti si riflettono. Esplora i loro significati e il loro simbolismo."
+    }
+  },
+  "Clock": {
+    "currentTime": "Ora attuale",
+    "mirrorHourCaught": "✨ Ora specchio catturata! ✨",
+    "readMore": "Scopri di più",
+    "notMirrorTime": "Non è un'ora specchio",
+    "categories": {
+      "fullMirror": "Le ore specchio complete sono momenti in cui i numeri dell'ora e dei minuti sono uguali (ad esempio, 11:11, 22:22). Sono generalmente associate a messaggi positivi e sincronicità.",
+      "reverseMirror": "Le ore specchio inverse sono momenti in cui i numeri dell'ora e dei minuti sono invertiti (ad esempio, 12:21, 05:50). Sono generalmente associate ad avvertimenti, consapevolezza o messaggi interiori.",
+      "tripleMirror": "Le ore specchio triple sono momenti in cui un numero viene ripetuto tre volte (ad esempio, 01:11, 03:33). Sono generalmente associate a energie forti, guida spirituale e messaggi che attirano l'attenzione.",
+      "default": "Quest'ora potrebbe avere un significato speciale."
+    },
+    "categoryTypes": {
+      "type": "Tipo",
+      "fullMirror": "Specchio completo",
+      "reverseMirror": "Specchio inverso",
+      "tripleMirror": "Specchio triplo"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Significato dell'ora specchio"
+    },
+    "notFound": {
+      "title": "Ora specchio non trovata",
+      "description": "L'ora specchio che stai cercando non esiste o non è ancora stata documentata.",
+      "backHome": "Torna a tutte le ore specchio"
+    },
+    "category": "Categoria",
+    "backToList": "Visualizza tutte le ore specchio",
+    "sections": {
+      "numerology": "🔢 Numerologia e numeri sacri",
+      "astrology": "⭐ Astrologia e influenze celesti",
+      "loveAndRelationships": "💕 Amore e relazioni",
+      "careerAndMoney": "💼 Carriera e successo finanziario",
+      "spiritualGuidance": "🧘 Guida spirituale e pratiche",
+      "actionSteps": "✨ Passi d'azione per oggi"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Spiegeluren & hun betekenissen",
+    "description": "Ontdek de mystieke betekenissen achter spiegeluren en hun spirituele betekenis. Leer wat het betekent wanneer je 11:11, 22:22 en andere spiegeluren ziet.",
+    "subtitle": "Alle spiegeluren & hun betekenissen",
+    "hero": {
+      "title": "Ontdek de verborgen boodschappen achter spiegeluren",
+      "description": "Spiegeluren zijn tijden waarop de uur- en minuutcijfers elkaar spiegelen. Verken hun betekenissen en symboliek."
+    }
+  },
+  "Clock": {
+    "currentTime": "Huidige tijd",
+    "mirrorHourCaught": "✨ Spiegeluur gevangen! ✨",
+    "readMore": "Meer informatie",
+    "notMirrorTime": "Geen spiegeltijd",
+    "categories": {
+      "fullMirror": "Volledige spiegeluren zijn tijden waarop de uur- en minuutcijfers hetzelfde zijn (bijv. 11:11, 22:22). Ze worden meestal geassocieerd met positieve boodschappen en synchroniciteiten.",
+      "reverseMirror": "Omgekeerde spiegeluren zijn tijden waarop de uur- en minuutcijfers omgekeerd zijn (bijv. 12:21, 05:50). Ze worden meestal geassocieerd met waarschuwingen, bewustzijn of innerlijke boodschappen.",
+      "tripleMirror": "Drievoudige spiegeluren zijn tijden waarop een cijfer drie keer wordt herhaald (bijv. 01:11, 03:33). Ze worden meestal geassocieerd met sterke energieën, spirituele begeleiding en opvallende boodschappen.",
+      "default": "Dit uur kan een speciale betekenis hebben."
+    },
+    "categoryTypes": {
+      "type": "Type",
+      "fullMirror": "Volledige spiegel",
+      "reverseMirror": "Omgekeerde spiegel",
+      "tripleMirror": "Drievoudige spiegel"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Spiegeluur betekenis"
+    },
+    "notFound": {
+      "title": "Spiegeluur niet gevonden",
+      "description": "Het spiegeluur dat je zoekt bestaat niet of is nog niet gedocumenteerd.",
+      "backHome": "Terug naar alle spiegeluren"
+    },
+    "category": "Categorie",
+    "backToList": "Bekijk alle spiegeluren",
+    "sections": {
+      "numerology": "🔢 Numerologie & Heilige getallen",
+      "astrology": "⭐ Astrologie & Hemelse invloeden",
+      "loveAndRelationships": "💕 Liefde & Relaties",
+      "careerAndMoney": "💼 Carrière & Financieel succes",
+      "spiritualGuidance": "🧘 Spirituele begeleiding & Praktijken",
+      "actionSteps": "✨ Actiestappen voor vandaag"
+    }
+  }
+}

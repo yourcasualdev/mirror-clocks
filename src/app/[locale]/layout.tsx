@@ -16,7 +16,16 @@ const playfair = Playfair_Display({
 });
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "tr" }, { locale: "zh" }];
+  return [
+    { locale: "en" },
+    { locale: "tr" },
+    { locale: "zh" },
+    { locale: "de" },
+    { locale: "nl" },
+    { locale: "es" },
+    { locale: "fr" },
+    { locale: "it" },
+  ];
 }
 
 export async function generateMetadata({
@@ -35,6 +44,11 @@ export async function generateMetadata({
         en: `${baseUrl}/en`,
         tr: `${baseUrl}/tr`,
         zh: `${baseUrl}/zh`,
+        de: `${baseUrl}/de`,
+        nl: `${baseUrl}/nl`,
+        es: `${baseUrl}/es`,
+        fr: `${baseUrl}/fr`,
+        it: `${baseUrl}/it`,
         "x-default": `${baseUrl}/en`,
       },
     },

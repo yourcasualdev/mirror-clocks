@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Horas espejo y sus significados",
+    "description": "Descubre los significados místicos detrás de las horas espejo y su importancia espiritual. Aprende qué significa cuando ves 11:11, 22:22 y otras horas espejo.",
+    "subtitle": "Todas las horas espejo y sus significados",
+    "hero": {
+      "title": "Descubre los mensajes ocultos detrás de las horas espejo",
+      "description": "Las horas espejo son momentos en los que los números de la hora y los minutos se reflejan entre sí. Explora sus significados y simbolismo."
+    }
+  },
+  "Clock": {
+    "currentTime": "Hora actual",
+    "mirrorHourCaught": "✨ ¡Hora espejo capturada! ✨",
+    "readMore": "Saber más",
+    "notMirrorTime": "No es una hora espejo",
+    "categories": {
+      "fullMirror": "Las horas espejo completas son momentos en los que los números de la hora y los minutos son iguales (por ejemplo, 11:11, 22:22). Suelen estar asociadas con mensajes positivos y sincronicidades.",
+      "reverseMirror": "Las horas espejo invertidas son momentos en los que los números de la hora y los minutos están invertidos (por ejemplo, 12:21, 05:50). Suelen estar asociadas con advertencias, conciencia o mensajes internos.",
+      "tripleMirror": "Las horas espejo triples son momentos en los que un número se repite tres veces (por ejemplo, 01:11, 03:33). Suelen estar asociadas con energías fuertes, guía espiritual y mensajes que llaman la atención.",
+      "default": "Esta hora podría tener un significado especial."
+    },
+    "categoryTypes": {
+      "type": "Tipo",
+      "fullMirror": "Espejo completo",
+      "reverseMirror": "Espejo invertido",
+      "tripleMirror": "Espejo triple"
+    }
+  },
+  "MirrorHour": {
+    "metadata": {
+      "titleSuffix": "Significado de la hora espejo"
+    },
+    "notFound": {
+      "title": "Hora espejo no encontrada",
+      "description": "La hora espejo que buscas no existe o aún no ha sido documentada.",
+      "backHome": "Volver a todas las horas espejo"
+    },
+    "category": "Categoría",
+    "backToList": "Ver todas las horas espejo",
+    "sections": {
+      "numerology": "🔢 Numerología y números sagrados",
+      "astrology": "⭐ Astrología e influencias celestiales",
+      "loveAndRelationships": "💕 Amor y relaciones",
+      "careerAndMoney": "💼 Carrera y éxito financiero",
+      "spiritualGuidance": "🧘 Guía espiritual y prácticas",
+      "actionSteps": "✨ Pasos de acción para hoy"
+    }
+  }
+}
