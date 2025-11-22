@@ -88,7 +88,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Header />
+            <Header locale={locale} />
 
             <main className="flex-1">{children}</main>
             <footer className="py-8 px-4 text-sm text-gray-500">
