@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 
 const nextIntlMiddleware = createNextIntlMiddleware(routing);
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the pathname contains encoded colons for mirror hours
