@@ -1,11 +1,12 @@
 import { getAllMirrorHours } from "@/src/lib/mirror-hours";
 import { MetadataRoute } from "next";
+import { routing } from "@/src/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.sacredmirrortime.com";
   const mirrorHours = getAllMirrorHours();
-  const locales = ["en", "tr"];
+  const locales = routing.locales;
 
   const staticPages = locales.flatMap((locale) => [
     {
