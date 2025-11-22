@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Discover the mystical meanings behind mirror hours and their spiritual significance",
   generator: "v0.dev",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
