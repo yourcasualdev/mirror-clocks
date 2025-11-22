@@ -53,5 +53,12 @@
   },
   "Footer": {
     "madeWithBy": "Gemacht mit <heart></heart> von <author>yourcasualdev</author>"
+  },
+  "CookieConsent": {
+    "title": "🍪 Cookie-Zustimmung",
+    "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und für Analysen. Ihre Daten können mit Google Analytics geteilt werden. Dies ist für die Einhaltung der EWR-Datenschutzbestimmungen erforderlich.",
+    "acceptAll": "Alle akzeptieren",
+    "rejectAll": "Alle ablehnen",
+    "learnMore": "Mehr erfahren"
   }
 }

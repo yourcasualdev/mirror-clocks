@@ -53,5 +53,12 @@
   },
   "Footer": {
     "madeWithBy": "Gemaakt met <heart></heart> door <author>yourcasualdev</author>"
+  },
+  "CookieConsent": {
+    "title": "🍪 Cookie-toestemming",
+    "description": "We gebruiken cookies om uw ervaring te verbeteren en voor analyse. Uw gegevens kunnen worden gedeeld met Google Analytics. Dit is vereist voor EER-privacynaleving.",
+    "acceptAll": "Alles accepteren",
+    "rejectAll": "Alles afwijzen",
+    "learnMore": "Meer informatie"
   }
 }

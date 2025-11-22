@@ -53,5 +53,12 @@
   },
   "Footer": {
     "madeWithBy": "由 <author>yourcasualdev</author> 用 <heart></heart> 制作"
+  },
+  "CookieConsent": {
+    "title": "🍪 Cookie同意",
+    "description": "我们使用Cookie来改善您的体验并进行分析。您的数据可能会与Google Analytics共享。这是符合欧洲经济区隐私合规性所必需的。",
+    "acceptAll": "全部接受",
+    "rejectAll": "全部拒绝",
+    "learnMore": "了解更多"
   }
 }

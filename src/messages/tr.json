@@ -53,5 +53,12 @@
   },
   "Footer": {
     "madeWithBy": "<author>yourcasualdev</author> tarafından <heart></heart> ile yapıldı"
+  },
+  "CookieConsent": {
+    "title": "🍪 Çerez Onayı",
+    "description": "Deneyiminizi geliştirmek ve analiz için çerezler kullanıyoruz. Kişisel verileriniz Google Analytics ile paylaşılabilir. Bu, AEA gizlilik düzenlemelerine uygunluk için gereklidir.",
+    "acceptAll": "Tümünü Kabul Et",
+    "rejectAll": "Tümünü Reddet",
+    "learnMore": "Daha Fazla Bilgi"
   }
 }

@@ -53,5 +53,12 @@
   },
   "Footer": {
     "madeWithBy": "Realizzato con <heart></heart> da <author>yourcasualdev</author>"
+  },
+  "CookieConsent": {
+    "title": "🍪 Consenso ai cookie",
+    "description": "Utilizziamo i cookie per migliorare la tua esperienza e per l'analisi. I tuoi dati possono essere condivisi con Google Analytics. Questo è richiesto per la conformità alla privacy dello SEE.",
+    "acceptAll": "Accetta tutto",
+    "rejectAll": "Rifiuta tutto",
+    "learnMore": "Per saperne di più"
   }
 }

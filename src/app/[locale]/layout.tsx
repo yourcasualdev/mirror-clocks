@@ -10,6 +10,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/src/components/language-switcher";
 import { Header } from "@/src/components/header";
+import { ConsentModeScript } from "@/src/components/consent-mode-script";
+import { CookieConsent } from "@/src/components/cookie-consent";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const playfair = Playfair_Display({
@@ -112,8 +114,10 @@ export default async function LocaleLayout({
                 </div>
               </div>
             </footer>
+            <CookieConsent />
           </NextIntlClientProvider>
         </ThemeProvider>
+        <ConsentModeScript />
         <GoogleAnalytics gaId="G-8RJYXTJ5N7" />
         <Analytics />
       </body>
