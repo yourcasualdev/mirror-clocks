@@ -37,6 +37,11 @@
     },
     "category": "Kategorie",
     "backToList": "Alle Spiegelstunden anzeigen",
+    "categoryValues": {
+      "Tam Ayna": "Vollständiger Spiegel",
+      "Ters Ayna": "Umgekehrter Spiegel",
+      "Üçlü Ayna": "Dreifacher Spiegel"
+    },
     "sections": {
       "numerology": "🔢 Numerologie & Heilige Zahlen",
       "astrology": "⭐ Astrologie & Himmlische Einflüsse",
@@ -45,5 +50,8 @@
       "spiritualGuidance": "🧘 Spirituelle Führung & Praktiken",
       "actionSteps": "✨ Handlungsschritte für heute"
     }
+  },
+  "Footer": {
+    "madeWith": "Gemacht mit"
   }
 }

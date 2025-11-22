@@ -158,7 +158,8 @@ export default async function MirrorHourPage({ params }: Props) {
                 {t("category")}
               </h3>
               <div className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
-                {mirrorHour.category}
+                {t(`categoryValues.${mirrorHour.category}` as any) ||
+                  mirrorHour.category}
               </div>
             </div>
           </CardContent>

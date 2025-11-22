@@ -37,6 +37,11 @@
     },
     "category": "Categorie",
     "backToList": "Bekijk alle spiegeluren",
+    "categoryValues": {
+      "Tam Ayna": "Volledige spiegel",
+      "Ters Ayna": "Omgekeerde spiegel",
+      "Üçlü Ayna": "Drievoudige spiegel"
+    },
     "sections": {
       "numerology": "🔢 Numerologie & Heilige getallen",
       "astrology": "⭐ Astrologie & Hemelse invloeden",
@@ -45,5 +50,8 @@
       "spiritualGuidance": "🧘 Spirituele begeleiding & Praktijken",
       "actionSteps": "✨ Actiestappen voor vandaag"
     }
+  },
+  "Footer": {
+    "madeWith": "Gemaakt met"
   }
 }

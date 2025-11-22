@@ -37,6 +37,11 @@
     },
     "category": "Categoria",
     "backToList": "Visualizza tutte le ore specchio",
+    "categoryValues": {
+      "Tam Ayna": "Specchio completo",
+      "Ters Ayna": "Specchio inverso",
+      "Üçlü Ayna": "Specchio triplo"
+    },
     "sections": {
       "numerology": "🔢 Numerologia e numeri sacri",
       "astrology": "⭐ Astrologia e influenze celesti",
@@ -45,5 +50,8 @@
       "spiritualGuidance": "🧘 Guida spirituale e pratiche",
       "actionSteps": "✨ Passi d'azione per oggi"
     }
+  },
+  "Footer": {
+    "madeWith": "Fatto con"
   }
 }

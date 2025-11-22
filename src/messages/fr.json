@@ -37,6 +37,11 @@
     },
     "category": "Catégorie",
     "backToList": "Voir toutes les heures miroir",
+    "categoryValues": {
+      "Tam Ayna": "Miroir complet",
+      "Ters Ayna": "Miroir inversé",
+      "Üçlü Ayna": "Miroir triple"
+    },
     "sections": {
       "numerology": "🔢 Numérologie et nombres sacrés",
       "astrology": "⭐ Astrologie et influences célestes",
@@ -45,5 +50,8 @@
       "spiritualGuidance": "🧘 Guidance spirituelle et pratiques",
       "actionSteps": "✨ Étapes d'action pour aujourd'hui"
     }
+  },
+  "Footer": {
+    "madeWith": "Fait avec"
   }
 }

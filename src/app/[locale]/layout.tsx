@@ -7,6 +7,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
+import { getTranslations } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({
@@ -70,10 +71,12 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const t = await getTranslations("Footer");
+
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.className} ${playfair.variable} min-h-screen flex flex-col`}
+        className={`${inter.className} ${playfair.variable} flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
@@ -86,7 +89,7 @@ export default async function LocaleLayout({
             <footer className="py-8 px-4 text-sm text-gray-500">
               <div className="container mx-auto flex justify-end">
                 <div className="flex items-center gap-2">
-                  Made with{" "}
+                  {t("madeWith")}{" "}
                   <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> by{" "}
                   <a
                     href="https://yourcasual.dev"
