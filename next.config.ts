@@ -1,7 +1,10 @@
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {};
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 export default withNextIntl(nextConfig);
+
+void initOpenNextCloudflareForDev();
