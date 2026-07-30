@@ -102,7 +102,7 @@ export default async function LocaleLayout({
                     ),
                     author: (children) => (
                       <a
-                        href="https://yourcasual.dev"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
