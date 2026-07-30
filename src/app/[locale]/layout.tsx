@@ -93,27 +93,6 @@ export default async function LocaleLayout({
             <Header locale={locale} />
 
             <main className="flex-1">{children}</main>
-            <footer className="py-8 px-4 text-sm text-gray-500">
-              <div className="container mx-auto flex justify-end">
-                <div className="flex items-center gap-2">
-                  {t.rich("madeWithBy", {
-                    heart: () => (
-                      <Heart className="w-4 h-4 text-pink-500 fill-pink-500 inline-block" />
-                    ),
-                    author: (children) => (
-                      <a
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
-                      >
-                        {children}
-                      </a>
-                    ),
-                  })}
-                </div>
-              </div>
-            </footer>
             <CookieConsent />
           </NextIntlClientProvider>
         </ThemeProvider>
